@@ -34,12 +34,18 @@ namespace JK_Components
             {
                 if(CheckingForCrit)
                 {
-                    if(__result.componentDef.Description.Id.StartsWith("Gear_Ferro") ||
-                        __result.componentDef.Description.Id.StartsWith("Gear_Endo") ||
-                        __result.componentDef.Description.Id.StartsWith("Gear_HeatSink_Engine") ||
-                        __result.componentDef.Description.Id.StartsWith("Gear_XL_Engine"))
+                    if (__result != null &&
+                        __result.componentDef != null &&
+                        __result.componentDef.Description != null &&
+                        __result.componentDef.Description.Id != null)
                     {
-                        __result = null;
+                        if (__result.componentDef.Description.Id.StartsWith("Gear_Ferro") ||
+                            __result.componentDef.Description.Id.StartsWith("Gear_Endo") ||
+                            __result.componentDef.Description.Id.StartsWith("Gear_HeatSink_Engine") ||
+                            __result.componentDef.Description.Id.StartsWith("Gear_XL_Engine"))
+                        {
+                            __result = null;
+                        }
                     }
                 }
             }

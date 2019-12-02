@@ -13,7 +13,7 @@ namespace JK_Components
 
         public static void Init(string modDir, string settings)
         {
-            var harmony = HarmonyInstance.Create("com.Same.BattleTech.GalaxyAtWar");
+            var harmony = HarmonyInstance.Create("JKMods.BattleTech.Components");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
             // read settings
             try
